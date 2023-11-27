@@ -1,0 +1,27 @@
+{
+  "name": "LimeadeListeningAutomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "allure": "allure generate ./test-output/allure-results --clean -o ./test-output/allure-report && allure open ./test-output/allure-report",
+    "test:staging": "cross-env test_env=staging npx playwright test",
+    "test:staging-ui": "cross-env test_env=staging npx playwright test --ui",
+    "test:staging-headed": "cross-env test_env=staging npx playwright test --headed",
+    "test:prod": "cross-env test_env=prod npx playwright test",
+    "test:prod-headed": "cross-env test_env=prod npx playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/convert-excel-to-json": "1.7.1",
+    "@types/node": "^20.9.1",
+    "allure-commandline": "^2.21.0",
+    "allure-playwright": "^2.0.0",
+    "convert-excel-to-json": "1.7.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3"
+  }
+}
